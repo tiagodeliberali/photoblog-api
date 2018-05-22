@@ -1,0 +1,14 @@
+pipeline:
+    restore:
+        image: microsoft/dotnet:2.1.300-preview2-sdk
+        commands:
+            - dotnet restore Photoblog.Api.csproj
+    compile:
+        image: microsoft/dotnet:2.1.300-preview2-sdk
+        commands:
+            - dotnet build Photoblog.Api.csproj
+    publish:
+        image: plugins/docker
+        repo: tiagodeliberali/photoblog_back
+        tags: latest
+        secrets: [ docker_username, docker_password ]
