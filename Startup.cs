@@ -74,6 +74,11 @@ namespace Photoblog.Api
                     name: "metadata",
                     template: "metadata/{link?}",
                     defaults: new { controller = "Home", action = "Metadata" });
+
+                routes.MapRoute(
+                    name: "default",
+                    template: "{*.}",
+                    defaults: new { controller = "Home", action = "Index" });
             });
         }
     }

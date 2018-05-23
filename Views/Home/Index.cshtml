@@ -1,0 +1,13 @@
+@model Photoblog.Api.Admin.BlogSettings
+
+@{
+    ViewData["Title"] = "API";
+}
+
+<h1>Photoblog API</h1>
+
+<li>
+    <ul>ImageApiKey: @Model.ImageApiKey</ul>
+    <ul>ImageUploadPreset: @Model.ImageUploadPreset</ul>
+    <ul>Connection string: @ViewBag.ConnectionString</ul>
+</li>
