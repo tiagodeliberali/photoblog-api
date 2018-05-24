@@ -31,6 +31,8 @@ namespace Photoblog.Api.Blog
                     .OrderByDescending(x => x.Date)
                     .ToList();
 
+                allPosts.ForEach(x => x.Category.Posts = null);
+
                 var cacheEntryOptions = new MemoryCacheEntryOptions()
                     .SetSlidingExpiration(TimeSpan.FromDays(365));
 
