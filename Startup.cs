@@ -39,7 +39,7 @@ namespace Photoblog.Api
             services.AddCors(options =>
                 options.AddPolicy("CorsPolicy", builder => {
                     builder
-                        .WithOrigins("http://tiagophotoblog.com.br/", "https://tiagophotoblog.com.br/")
+                        .WithOrigins("http://tiagophotoblog.com.br", "https://tiagophotoblog.com.br")
                         .AllowAnyMethod()
                         .AllowCredentials()
                         .AllowAnyHeader();
